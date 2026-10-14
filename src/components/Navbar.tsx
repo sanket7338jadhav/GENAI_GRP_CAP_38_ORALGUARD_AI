@@ -19,7 +19,7 @@ const Navbar = ({ isLoggedIn = false }: { isLoggedIn?: boolean }) => {
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <Link to="/" className="flex items-center gap-2">
           <ScanEye className="h-7 w-7 text-primary" />
-          <span className="text-xl font-bold gradient-text">OralSight</span>
+          <span className="text-xl font-bold gradient-text">OralGuard AI</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

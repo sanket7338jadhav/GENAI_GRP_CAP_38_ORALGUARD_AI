@@ -16,7 +16,7 @@ interface DisplayMessage {
 const GREETING: DisplayMessage = {
   id: "greeting",
   role: "assistant",
-  content: "Hi there! 👋 I'm **OralSight AI**, your dental health assistant. Tell me what's bothering you and I'll help you figure out what to do next.",
+  content: "Hi there! 👋 I'm **OralGuard AI**, your dental health assistant. Tell me what's bothering you and I'll help you figure out what to do next.",
   quickReplies: [
     "I have tooth pain",
     "My gums are bleeding",
@@ -159,7 +159,7 @@ const DentalChatWidget = () => {
                   <Bot className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-foreground">OralSight AI</p>
+                  <p className="text-sm font-semibold text-foreground">OralGuard AI</p>
                   <p className="text-xs text-muted-foreground">Dental Health Assistant</p>
                 </div>
               </div>

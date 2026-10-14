@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { loadModel, predict } from '@/lib/model';
 
 const TERMINAL_LINES = [
-  { type: "info", text: "[INFO] Initializing OralSight Neural Engine v2.1..." },
+  { type: "info", text: "[INFO] Initializing OralGuard AI Neural Engine v2.1..." },
   { type: "info", text: "[INFO] Loading InceptionV3 pretrained weights..." },
   { type: "info", text: "[INFO] Preprocessing image → 224×224 tensor..." },
   { type: "info", text: "[INFO] Running MobileNetV2 classification pipeline..." },

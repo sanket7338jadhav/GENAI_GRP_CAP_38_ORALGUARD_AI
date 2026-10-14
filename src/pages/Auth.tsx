@@ -21,7 +21,7 @@ const Auth = () => {
             <ScanEye className="h-10 w-10 text-primary mx-auto mb-3" />
             <h1 className="text-2xl font-bold">{isLogin ? "Welcome Back" : "Create Account"}</h1>
             <p className="text-sm text-muted-foreground mt-1">
-              {isLogin ? "Sign in to your OralSight profile" : "Join OralSight for full access"}
+              {isLogin ? "Sign in to your OralGuard AI profile" : "Join OralGuard AI for full access"}
             </p>
           </div>
 

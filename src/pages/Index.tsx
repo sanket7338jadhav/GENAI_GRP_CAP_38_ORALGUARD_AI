@@ -41,48 +41,51 @@ const Index = () => {
 
       {/* Hero */}
       <section className="pt-32 pb-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(217_91%_60%/0.08),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(168_69%_25%/0.08),transparent_60%)]" />
         <div className="container mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-muted/50 mb-8">
-              <Activity className="h-4 w-4 text-secondary" />
-              <span className="text-xs font-medium text-muted-foreground">AI-Powered Dental Screening Research</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/80 shadow-sm mb-8">
+              <Activity className="h-4 w-4 text-primary" />
+              <span className="text-xs font-semibold text-primary">OralGuard AI</span>
+              <span className="text-xs text-muted-foreground">• See early. Seek care sooner.</span>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              Screen Oral Conditions
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-foreground">
+              AI-Assisted
               <br />
-              <span className="gradient-text">With AI Precision</span>
+              <span className="gradient-text">Oral Health Screening</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              A research prototype evaluating lightweight CNN architectures for early detection of oral white lesions — 
-              Homogenous Leukoplakia, Non-Homogenous Leukoplakia, and Other Oral White Lesions.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed">
+              Analyze oral images using deep learning to explore preliminary screening insights. The application provides image-based predictions and supporting visual explanations to assist awareness and encourage timely professional assessment.
+            </p>
+            <p className="text-sm md:text-base text-foreground/80 max-w-xl mx-auto mb-10 font-medium">
+              Capture or upload an oral image, review the AI-generated result, and explore the visual explanation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/auth"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-all animate-pulse-glow"
-              >
-                Sign In / Register
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-              <Link
                 to="/studio"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-secondary text-secondary font-semibold text-lg hover:bg-secondary/10 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-all animate-pulse-glow shadow-md hover:shadow-lg"
               >
                 <ScanEye className="h-5 w-5" />
-                Quick Scan (Guest)
+                Start New Scan
+                <ArrowRight className="h-5 w-5" />
               </Link>
+              <a
+                href="#how-it-works"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border-2 border-primary text-primary font-semibold text-lg hover:bg-primary/10 transition-all bg-card/60"
+              >
+                Learn How It Works
+              </a>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features */}
-      <section className="py-20 px-4">
+      <section id="how-it-works" className="py-20 px-4">
         <div className="container mx-auto">
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-center mb-4"
@@ -90,7 +93,7 @@ const Index = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            How <span className="gradient-text">OralSight</span> Works
+            How <span className="gradient-text">OralGuard AI</span> Works
           </motion.h2>
           <p className="text-muted-foreground text-center max-w-xl mx-auto mb-16">
             A dual-pipeline approach combining segmentation and classification for comprehensive screening.
