@@ -9,8 +9,7 @@ const Navbar = ({ isLoggedIn = false }: { isLoggedIn?: boolean }) => {
 
   const links = [
     { to: "/", label: "Home" },
-    { to: "/research", label: "Research" },
-    { to: "/about", label: "About" },
+    { to: "/studio", label: "Studio" },
     ...(isLoggedIn ? [{ to: "/dashboard", label: "Dashboard" }] : []),
   ];
 
@@ -35,10 +34,10 @@ const Navbar = ({ isLoggedIn = false }: { isLoggedIn?: boolean }) => {
             </Link>
           ))}
           <Link
-            to="/auth"
-            className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors"
+            to="/studio"
+            className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors shadow-sm"
           >
-            Sign In
+            Start Scan
           </Link>
         </div>
 
@@ -67,11 +66,11 @@ const Navbar = ({ isLoggedIn = false }: { isLoggedIn?: boolean }) => {
                 </Link>
               ))}
               <Link
-                to="/auth"
+                to="/studio"
                 onClick={() => setMobileOpen(false)}
                 className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold text-center"
               >
-                Sign In
+                Start Scan
               </Link>
             </div>
           </motion.div>

@@ -1,7 +1,6 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Upload, ScanEye, AlertTriangle, CheckCircle2, ArrowRight, Save } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Upload, ScanEye, AlertTriangle, CheckCircle2, RefreshCw } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { loadModel, predict } from '@/lib/model';
@@ -81,9 +80,9 @@ const Studio = () => {
               <span className="gradient-text">Analysis Studio</span>
             </h1>
             <p className="text-muted-foreground">Upload a dental image for AI-powered screening</p>
-            <div className="inline-flex items-center gap-1.5 mt-3 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-medium">
+            <div className="inline-flex items-center gap-1.5 mt-3 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
               <ScanEye className="h-3.5 w-3.5" />
-              Guest Mode
+              AI Screening Studio
             </div>
           </div>
 
@@ -199,24 +198,18 @@ const Studio = () => {
                   </div>
                 </div>
 
-                {/* Guest Save CTA */}
-                <div className="glass-card p-6 border-primary/30 text-center">
-                  <Save className="h-8 w-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold text-lg mb-2">Save These Results to Your Profile</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Create a free account to keep your scan history and track oral health trends.
+                {/* Guidance & Action Card */}
+                <div className="glass-card p-6 border-primary/20 text-center">
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Screening Insights & Next Steps</h3>
+                  <p className="text-sm text-muted-foreground mb-5 max-w-lg mx-auto leading-relaxed">
+                    This automated assessment provides screening awareness and preliminary indications. If symptoms persist or if potential lesions are identified, consult a licensed oral health professional for clinical diagnosis.
                   </p>
-                  <Link
-                    to="/auth"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
+                  <button
+                    onClick={reset}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors shadow-md"
                   >
-                    Sign Up & Save <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-
-                <div className="text-center mt-6">
-                  <button onClick={reset} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    ← Scan another image
+                    <RefreshCw className="h-4 w-4" />
+                    Scan Another Image
                   </button>
                 </div>
               </motion.div>
