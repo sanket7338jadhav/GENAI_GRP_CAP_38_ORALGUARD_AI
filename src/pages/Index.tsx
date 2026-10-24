@@ -28,8 +28,8 @@ const features = [
 ];
 
 const stats = [
-  { label: "Baseline CNN F1", value: "0.35", color: "text-muted-foreground" },
-  { label: "MobileNetV2 F1", value: "0.63", color: "text-secondary" },
+  { label: "Baseline CNN F1", value: "0.66", color: "text-muted-foreground" },
+  { label: "MobileNetV2 F1", value: "0.81", color: "text-secondary" },
   { label: "Dataset Size", value: "261", color: "text-primary" },
   { label: "Architecture", value: "MobileNetV2", color: "text-primary" },
 ];
@@ -163,19 +163,19 @@ const Index = () => {
               <div>
                 <div className="flex justify-between text-sm mb-1">
                   <span className="text-muted-foreground">Baseline CNN</span>
-                  <span>0.35</span>
+                  <span>0.66</span>
                 </div>
                 <div className="h-3 rounded-full bg-muted overflow-hidden">
-                  <div className="h-full rounded-full bg-muted-foreground/40" style={{ width: "35%" }} />
+                  <div className="h-full rounded-full bg-secondary" style={{ width: "66%" }} />
                 </div>
               </div>
               <div>
                 <div className="flex justify-between text-sm mb-1">
                   <span className="text-muted-foreground">MobileNetV2</span>
-                  <span className="text-secondary font-semibold">0.63</span>
+                  <span className="text-secondary font-semibold">0.81</span>
                 </div>
                 <div className="h-3 rounded-full bg-muted overflow-hidden">
-                  <div className="h-full rounded-full bg-secondary" style={{ width: "63%" }} />
+                  <div className="h-full rounded-full bg-secondary" style={{ width: "81%" }} />
                 </div>
               </div>
             </div>
